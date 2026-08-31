@@ -1,0 +1,6 @@
+.venv/
+.env
+LLM/data/conversations/
+__pycache__/
+*.pyc
+TTS/voices/*.onnx
