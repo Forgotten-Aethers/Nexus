@@ -83,7 +83,7 @@ Actualmente está testeado y probado en **Windows 11**.
 
 En un futuro planeo intentar hacerlo totalmente portable y facilitar su instalación, pero por el momento depende totalmente de ti.
 
-Puedes encontrar todas las librerías necesarias en `requirements.txt`, situado en la raíz del proyecto.
+Puedes encontrar todas las librerías necesarias en `requirements.txt`, situado en la carpeta `docs`, dentro de la raíz del proyecto.
 
 Actualmente, por problemas de compatibilidad con AMD, los módulos **TTS** y **STT** hacen uso de la CPU, ya que son ligeros y hay un cambio muy grande entre utilizarlos en la CPU o GPU. Así que no deberíais tener problemas con la GPU.
 
