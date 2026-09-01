@@ -17,8 +17,8 @@ localdir = basedir / "STT"
 audio_folder_path = localdir / "recordings"
 ubicacion_audio = audio_folder_path / "audio.wav"
 
-if audio_folder_path:
-    print("Carpeta encontrada")
+if not audio_folder_path.exists():
+    audio_folder_path.mkdir(parents=True, exist_ok=True)
 
 frecuency = 16000
 grabando = False
