@@ -31,6 +31,12 @@ Suponiendo que no haya problemas de compatibilidad, instalar Nexus 1.0 debería 
     
     `pip install -r docs/requirements.txt`
 
+3. Ahora vamos a instalar el modelo de voz, entra a `TTS`, y dentro de `voices` abre una terminal nueva.
+    
+    Ejecuta este comando en la terminal:
+    
+    `curl -L -O https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/es/es_ES/sharvard/medium/es_ES-sharvard-medium.onnx?download=true`
+
 Y eso sería todo!
 
 ## English (EN)
@@ -58,5 +64,11 @@ Assuming there are no compatibility issues, installing Nexus 1.0 should be fairl
    Now install the required libraries by running:
 
    `pip install -r docs/requirements.txt`
+
+3. Now we need to install the voice model, go to `TTS`, then go to `voices` and open a new terminal.
+    
+    Execute this on the terminal:
+    
+    `curl -L -O https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/es/es_ES/sharvard/medium/es_ES-sharvard-medium.onnx?download=true`
 
 And that's it!
