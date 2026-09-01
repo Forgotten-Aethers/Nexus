@@ -24,6 +24,9 @@ conversation_folder = datadir / "conversations"
 tts_queue = basedir / "TTS" / "tts_queue.txt"
 llm_queue = localdir / "llm_queue.txt"
 
+if not conversation_folder.exists():
+    conversation_folder.mkdir(parents=True, exist_ok=True)
+
 # ============================================================
 # System prompt
 # ============================================================
