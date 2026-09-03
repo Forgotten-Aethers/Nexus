@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+}
+
+.sidebar {
+    background-color: rgb(29, 29, 29);
+}
+
+.llm-conversation-box {
+    background-color: rgb(37, 37, 37);
+}
+
+.llm-input-box {
+    background-color: rgb(26, 25, 25);
+    align-items: center;
+}
+
+.main-area {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
