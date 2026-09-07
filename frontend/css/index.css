@@ -20,15 +20,78 @@ body {
 .llm-input-box {
     display: flex;
     background-color: rgb(26, 25, 25);
-    justify-content: center;
-    align-items: center;
     margin-bottom: 10px;
     position: absolute;
     bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
+    width: 45%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 25px;
+}
+
+.upload-files, .enable-internet-searching, .voice-mode {
+    background-color: rgb(26, 25, 25);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.upload-files {
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(29, 28, 28);
+    padding: 8px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    transition: background-color 0.3s ease;
+}
+
+.enable-internet-searching {
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    transition: background-color 0.3s ease;
+}
+
+.voice-mode:hover {
+    background-color: rgba(151, 48, 248, 0.699);
+    transition: background-color 0.3s ease;
+}
+
+.enable-internet-searching:hover {
+    background-color: rgb(43, 43, 43);
+    transition: background-color 0.3s ease;
+}
+
+.upload-files:hover {
+    background-color: rgb(43, 43, 43);
+    transition: background-color 0.3s ease;
+}
+
+.voice-mode {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(109, 15, 197, 0.699);
+    padding: 8px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    transition: background-color 0.3s ease;
+}
+
+.text-input {
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    margin-left: 5px;
+    padding: 10px;
+    width: 80%;
 }
 
 .llm-input-box > * {
