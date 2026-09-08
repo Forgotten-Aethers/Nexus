@@ -12,28 +12,27 @@
     <aside class="sidebar">
         <div class="sidebar-header">
             <img src="../../assets/images/Nexus-Sidebar-title-v1.0.0.svg" alt="Sidebar Header">
+            <button class="search-conversations-button">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+            <button class="hide-sidebar-button">
+                <span class="material-symbols-outlined">
+                    dock_to_right
+                </span>
+            </button>
         </div>
-        <button class="search-conversations-button">
-            <span class="material-symbols-outlined">
-                search
-            </span>
-        </button>
-        <button>
-            <span class="material-symbols-outlined">
-                dock_to_right
-            </span>
-        </button>
         <button class="new-conversation-button">New Conversation</button>
-        <div class="conversations-box">
-
-        </div>
         <button class="settings-button">Settings</button>
+        <div class="conversations-box">
+        </div>
     </aside>
 
     <main class="main-area">
         <div class="llm-conversation-box">
             <div class="llm-input-box">
-                <input type="search" class="text-input" placeholder="Ask anything">
+                <textarea type="search" class="text-input" placeholder="Ask anything"></textarea>
                 <div class="buttons">
                     <button class="upload-files">
                         <span class="material-symbols-outlined">
