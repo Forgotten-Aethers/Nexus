@@ -1,3 +1,9 @@
+/*
+=================================
+Structure
+=================================
+*/
+
 html, body {
     height: 100%;
     margin: 0;
@@ -8,18 +14,25 @@ body {
     grid-template-columns: 15% 1fr;
 }
 
-.sidebar {
-    background: rgb(29, 29, 29);
-    display: inline-block;
+.main-area {
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
 
-.llm-conversation-box {
-    background-color: rgb(32, 32, 32);
-    position: relative;
+/*
+=================================
+Sidebar
+=================================
+*/
+
+.sidebar {
+    background: rgb(29, 29, 29);
 }
+
+/* Sidebar Header */
+
 .sidebar-header {
     width: fit-content;
-    height: fit-content;
 }
 
 .sidebar-header img {
@@ -28,6 +41,8 @@ body {
     margin-left: 1rem;
     margin-top: 0.5rem;
 }
+
+/* Button: new conversation */
 
 .new-conversation-button {
     background-color: rgb(37, 37, 37);
@@ -43,21 +58,32 @@ body {
 
 .new-conversation-button:hover {
     background-color: rgb(59, 59, 59);
-    transition: background-color 0.3s ease;
 }
 
-.buttons{
-    display: flex;
-    grid: buttons;
-    justify-content: flex-end;
+/*
+=================================
+Conversation Box
+=================================
+*/
+
+.llm-conversation-box {
+    background-color: rgb(32, 32, 32);
+    position: relative;
 }
+
+/*
+=================================
+LLM Input Box
+=================================
+*/
 
 .llm-input-box {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas:     
-    "input"
-    "buttons";
+    grid-template-areas:
+        "input"
+        "buttons";
+
     background-color: rgb(26, 25, 25);
     margin-bottom: 10px;
     position: absolute;
@@ -70,14 +96,56 @@ body {
     border-radius: 25px;
 }
 
-.upload-files, .enable-internet-searching, .voice-mode, .thinking-button {
+.llm-input-box > * {
+    margin: 10px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    grid-area: buttons;
+    justify-content: flex-end;
+}
+
+.upload-files,
+.enable-internet-searching,
+.voice-mode,
+.thinking-button {
     background-color: rgb(26, 25, 25);
     border: none;
     color: white;
     cursor: pointer;
     margin: 5px;
-    margin-top: 0px;
+    margin-top: 0;
 }
+
+/* Text Input */
+
+.text-input {
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    margin-left: 5px;
+    margin-bottom: 0;
+    padding: 0.75rem;
+}
+
+/* Button: thinking */
+
+.thinking-button {
+    background-color: rgba(43, 43, 43);
+    padding: 8px;
+    border-radius: 5rem;
+    transition: background-color 0.3s ease;
+}
+
+.thinking-button:hover {
+    background-color: rgba(59, 59, 59);
+}
+
+/* Button: upload files */
 
 .upload-files {
     margin-right: auto;
@@ -86,10 +154,15 @@ body {
     background-color: rgb(29, 28, 28);
     padding: 8px;
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
     transition: background-color 0.3s ease;
-    justify-content: flex-start;
 }
+
+.upload-files:hover {
+    background-color: rgb(43, 43, 43);
+}
+
+/* Button: internet search */
 
 .enable-internet-searching {
     margin-left: 5px;
@@ -97,24 +170,15 @@ body {
     height: 40px;
     padding: 8px;
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    transition: background-color 0.3s ease;
-}
-
-.voice-mode:hover {
-    background-color: rgba(151, 48, 248, 0.699);
+    aspect-ratio: 1;
     transition: background-color 0.3s ease;
 }
 
 .enable-internet-searching:hover {
     background-color: rgb(43, 43, 43);
-    transition: background-color 0.3s ease;
 }
 
-.upload-files:hover {
-    background-color: rgb(43, 43, 43);
-    transition: background-color 0.3s ease;
-}
+/* Button: voice mode */
 
 .voice-mode {
     width: 40px;
@@ -122,40 +186,10 @@ body {
     background-color: rgba(109, 15, 197, 0.699);
     padding: 8px;
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
     transition: background-color 0.3s ease;
 }
 
-.thinking-button {
-    background-color: rgba(43, 43, 43);
-    padding: 8px;
-    border: none;
-    color: white;
-    border-radius: 5rem;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.thinking-button:hover {
-    background-color: rgba(59, 59, 59);
-    transition: background-color 0.3s ease;
-}
-
-.text-input {
-    border: none;
-    border-radius: 25px;
-    background-color: rgb(37, 37, 37);
-    color: white;
-    margin-left: 5px;
-    margin-bottom: 0px;
-    padding: 0.75rem;
-}
-
-.llm-input-box > * {
-    margin: 10px;
-}
-
-.main-area {
-    display: grid;
-    grid-template-rows: 1fr auto;
+.voice-mode:hover {
+    background-color: rgba(151, 48, 248, 0.699);
 }
