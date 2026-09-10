@@ -11,7 +11,7 @@ html, body {
 
 body {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: max-content 1fr;
 }
 
 .main-area {
@@ -27,6 +27,9 @@ Sidebar
 
 .sidebar {
     background: rgb(26, 25, 25);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(37, 37, 37);
 }
 
 /* Sidebar Header */
@@ -44,9 +47,16 @@ Sidebar
     margin-top: 0.5rem;
 }
 
-/* Button: new conversation */
+/* Sidebar main buttons */
 
-.new-conversation-button {
+.sidebar-main-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button: new conversation, settings, projects */
+
+.new-conversation-button, .settings-button, .projects-button {
     text-align: left;
     font-size: 1rem;
     background: none;
@@ -55,42 +65,17 @@ Sidebar
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     padding: 0.4rem;
+    margin: 0,1rem;
     margin-left: 1rem;
     margin-right: 1rem;
     border: none;
-    flex: 1;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: calc(100% - 2rem);
     box-sizing: border-box;
+    align-self: stretch;
+    display: block;
 }
 
-.new-conversation-button:hover {
-    background-color: rgb(59, 59, 59);
-}
-
-/* Button: settings */
-
-.settings-button {
-    text-align: left;
-    font-size: 1rem;
-    background: none;
-    color: white;
-    border-radius: 0.5rem;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-    padding: 0.4rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border: none;
-    flex: 1;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: calc(100% - 2rem);
-    box-sizing: border-box;
-}
-
-.settings-button:hover {
+.new-conversation-button:hover, .settings-button:hover, .projects-button:hover {
     background-color: rgb(59, 59, 59);
 }
 
