@@ -1,0 +1,97 @@
+/*
+=================================
+Sidebar
+=================================
+*/
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background: rgb(20, 20, 20);
+    border-right: 1px solid rgb(66, 66, 66);
+    transition: 0.3s ease-in-out;
+}
+
+/* Sidebar Header */
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar-header img {
+    width: 7.5rem;
+    height: auto;
+    margin: 1rem 0 0 1.5rem;
+}
+
+/* Sidebar Main Buttons */
+
+.sidebar-main-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button: New Conversation, Settings, Projects */
+
+.new-conversation-button,
+.settings-button,
+.projects-button {
+    display: block;
+    align-self: stretch;
+    box-sizing: border-box;
+
+    padding: 0.4rem;
+    margin: 0 1rem;
+
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+    background: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.new-conversation-button:hover,
+.settings-button:hover,
+.projects-button:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+/* Button: Search Conversations, Hide Sidebar */
+
+.search-conversations-button,
+.hide-sidebar-button {
+    padding: 0.3rem;
+    margin-right: 1rem;
+
+    background: none;
+    border: none;
+    border-radius: 0.4rem;
+    color: white;
+    cursor: pointer;
+}
+
+.search-conversations-button {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.search-conversations-button:hover,
+.hide-sidebar-button:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+/*
+=================================
+Media
+=================================
+*/
+
+@media (max-width: 500px) {
+    .sidebar {
+        display: none;
+    }
+}

@@ -1,0 +1,157 @@
+/*
+=================================
+LLM Input Box
+=================================
+*/
+
+.llm-input-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "input"
+        "buttons";
+
+    position: absolute;
+    bottom: 5.5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 45%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+
+    background-color: rgb(20, 20, 20);
+    border-radius: 1.5rem;
+
+    transition: width 0.3s ease-in-out;
+}
+
+.llm-input-box > * {
+    margin: 10px;
+}
+
+/*
+=================================
+Buttons
+=================================
+*/
+
+.buttons {
+    display: flex;
+    grid-area: buttons;
+    justify-content: flex-end;
+    margin-top: 0;
+}
+
+.upload-files,
+.enable-internet-searching,
+.voice-mode,
+.thinking-button {
+    background-color: rgb(20, 20, 20);
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 0;
+}
+
+/* Thinking Button */
+
+.thinking-button {
+    padding: 8px;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.thinking-button:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+/* Upload Files Button */
+
+.upload-files {
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.upload-files:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+/* Internet Search Button */
+
+.enable-internet-searching {
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.enable-internet-searching:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+/* Voice Mode Button */
+
+.voice-mode {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.voice-mode:hover {
+    background-color: rgba(109, 15, 197, 0.699);
+}
+
+/*
+=================================
+Text Input
+=================================
+*/
+
+.text-input {
+    border: none;
+    font-size: 1rem;
+    border-radius: 25px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    margin-bottom: 0;
+    padding: 0.75rem;
+    resize: none;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
+/*
+=================================
+Media
+=================================
+*/
+
+@media (max-width: 1000px) {
+    .llm-input-box {
+        width: 55%;
+    }
+}
+
+@media (max-width: 800px) {
+    .llm-input-box {
+        width: 75%;
+    }
+}
+
+@media (max-width: 600px) {
+    .llm-input-box {
+        width: 95%;
+    }
+}
